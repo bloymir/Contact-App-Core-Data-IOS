@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		680E25CD2880AC5C00556A7B /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680E25CB2880AC5C00556A7B /* ContactTableViewCell.swift */; };
+		680E25CE2880AC5C00556A7B /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680E25CC2880AC5C00556A7B /* ContactTableViewCell.xib */; };
 		684BC798287FA00A0093CD24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684BC797287FA00A0093CD24 /* AppDelegate.swift */; };
 		684BC79A287FA00A0093CD24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684BC799287FA00A0093CD24 /* SceneDelegate.swift */; };
 		684BC79C287FA00A0093CD24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684BC79B287FA00A0093CD24 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		680E25CB2880AC5C00556A7B /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		680E25CC2880AC5C00556A7B /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
 		684BC794287FA00A0093CD24 /* Contact App CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contact App CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		684BC797287FA00A0093CD24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		684BC799287FA00A0093CD24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				684BC7A5287FA00B0093CD24 /* LaunchScreen.storyboard */,
 				684BC7A8287FA00B0093CD24 /* Info.plist */,
 				684BC7A0287FA00A0093CD24 /* Contact_App_CoreData.xcdatamodeld */,
+				680E25CB2880AC5C00556A7B /* ContactTableViewCell.swift */,
+				680E25CC2880AC5C00556A7B /* ContactTableViewCell.xib */,
 			);
 			path = "Contact App CoreData";
 			sourceTree = "<group>";
@@ -128,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				680E25CE2880AC5C00556A7B /* ContactTableViewCell.xib in Resources */,
 				684BC7A7287FA00B0093CD24 /* LaunchScreen.storyboard in Resources */,
 				684BC7A4287FA00B0093CD24 /* Assets.xcassets in Resources */,
 				684BC79F287FA00A0093CD24 /* Main.storyboard in Resources */,
@@ -142,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				684BC79C287FA00A0093CD24 /* ViewController.swift in Sources */,
+				680E25CD2880AC5C00556A7B /* ContactTableViewCell.swift in Sources */,
 				684BC7A2287FA00A0093CD24 /* Contact_App_CoreData.xcdatamodeld in Sources */,
 				684BC798287FA00A0093CD24 /* AppDelegate.swift in Sources */,
 				684BC79A287FA00A0093CD24 /* SceneDelegate.swift in Sources */,

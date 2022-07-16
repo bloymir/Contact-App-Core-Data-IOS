@@ -57,15 +57,119 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Contactos" id="ypl-nE-36b">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="oF8-6u-Kj4"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="oF8-6u-Kj4">
+                            <connections>
+                                <action selector="addPressedBt:" destination="BYZ-38-t0r" id="3oF-Ot-E4k"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="contactsTable" destination="Zpy-0j-1qP" id="sEO-Ky-QAf"/>
+                        <segue destination="AQF-Wi-IUf" kind="show" identifier="editContact" id="Bd6-Zf-R24"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="75"/>
+        </scene>
+        <!--Editar Contacto-->
+        <scene sceneID="3B4-9z-6tp">
+            <objects>
+                <viewController id="AQF-Wi-IUf" customClass="EditContactViewController" customModule="Contact_App_CoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9U4-Ph-vBz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="Mr2-8h-4jw">
+                                <rect key="frame" x="20" y="150" width="374" height="652"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GMc-4o-ggc">
+                                        <rect key="frame" x="0.0" y="1.5" width="374" height="147.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="BBL-fc-Dg0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfC-xT-oWY">
+                                        <rect key="frame" x="0.0" y="217" width="374" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="JCN-wr-8OX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefono" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gvE-4L-hX9">
+                                        <rect key="frame" x="0.0" y="314" width="374" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="VRc-3p-dhN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Direccion" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RHY-WV-aAc">
+                                        <rect key="frame" x="0.0" y="411" width="374" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ewd-QN-aHW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Zpu-wt-GIl">
+                                        <rect key="frame" x="0.0" y="508" width="374" height="144"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uy6-JT-5I8">
+                                                <rect key="frame" x="0.0" y="0.0" width="162" height="144"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Cancelar">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="CancellBT:" destination="AQF-Wi-IUf" eventType="touchUpInside" id="a11-b7-Oku"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSi-ym-J0a">
+                                                <rect key="frame" x="212" y="0.0" width="162" height="144"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Guardar">
+                                                    <backgroundConfiguration key="background"/>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="saveBT:" destination="AQF-Wi-IUf" eventType="touchUpInside" id="BFx-NG-f4G"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iqK-5b-Miw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mr2-8h-4jw" firstAttribute="leading" secondItem="iqK-5b-Miw" secondAttribute="leading" constant="20" id="2c4-zJ-Dhy"/>
+                            <constraint firstItem="iqK-5b-Miw" firstAttribute="bottom" secondItem="Mr2-8h-4jw" secondAttribute="bottom" constant="60" id="MOn-lG-2kt"/>
+                            <constraint firstItem="iqK-5b-Miw" firstAttribute="trailing" secondItem="Mr2-8h-4jw" secondAttribute="trailing" constant="20" id="QhV-ut-UQf"/>
+                            <constraint firstItem="Mr2-8h-4jw" firstAttribute="top" secondItem="iqK-5b-Miw" secondAttribute="top" constant="10" id="dEM-l0-ixN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Editar Contacto" id="GnZ-bW-HHm">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera.fill" catalog="system" id="cgG-co-zJn">
+                            <connections>
+                                <action selector="takePhotoBT:" destination="AQF-Wi-IUf" id="SBL-gQ-9rp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="adressTextField" destination="RHY-WV-aAc" id="jio-iC-Hfx"/>
+                        <outlet property="contactImage" destination="GMc-4o-ggc" id="SVS-oT-TSg"/>
+                        <outlet property="nameTextField" destination="jfC-xT-oWY" id="Y9C-Q2-s5o"/>
+                        <outlet property="phoneTextField" destination="gvE-4L-hX9" id="ewr-bB-Sse"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcS-oj-H0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888" y="75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sOu-3o-r6y">
@@ -87,8 +191,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
